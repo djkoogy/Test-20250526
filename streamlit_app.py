@@ -4,6 +4,7 @@ import streamlit as st
 from streamlit_folium import st_folium
 from streamlit_folium import folium_static
 from folium.plugins import MarkerCluster
+from folium.features import CustomIcon 
 
 
 
