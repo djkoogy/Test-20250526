@@ -11,7 +11,7 @@ st.title("진주시 CCTV 현황")
 
 df = pd.read_csv("jinju_cctv_20250513.csv", encoding='euc-kr')
 
-st.dataframe(df, height=100)
+st.dataframe(df, height=200)
 
 df[["lat","lon"]] = df[["위도","경도"]]
 
@@ -23,6 +23,7 @@ for idx, row in df.iterrows():
     folium.Marker(
         location=[row["lat"], row["lon"]],
         popup=row["설치장소"],
+        icon=folium.Icon(color="blue", icon="info-sign"),
     ).add_to(marker_cluster)
 
 st_folium(m)
