@@ -20,14 +20,13 @@ m = folium.Map(location=[35.1799817, 128.1076213], zoom_start=13)
 
 marker_cluster = MarkerCluster().add_to(m)
 
-icon = CustomIcon("icon/cctv_icon.png", icon_size=(20, 20))
+#icon = CustomIcon("icon/cctv_icon.png", icon_size=(20, 20))
 
 for idx, row in df.iterrows():
     folium.Marker(
         location=[row["lat"], row["lon"]],
         popup=row["설치장소"],
-        icon=icon,
-        #icon=folium.Icon(color="blue", icon="info-sign"),
+        icon=folium.Icon(color="blue", icon="info-sign"),
     ).add_to(marker_cluster)
 
 st_folium(m, width='100%')
