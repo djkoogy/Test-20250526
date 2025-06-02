@@ -11,7 +11,7 @@ st.title("진주시 CCTV 현황")
 
 df = pd.read_csv("jinju_cctv_20250513.csv", encoding='euc-kr')
 
-st.dataframe(df, height=200)
+st.dataframe(df, height=100)
 
 df[["lat","lon"]] = df[["위도","경도"]]
 
