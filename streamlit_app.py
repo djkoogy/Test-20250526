@@ -26,5 +26,6 @@ for idx, row in df.iterrows():
         icon=folium.Icon(color="blue", icon="info-sign"),
     ).add_to(marker_cluster)
 
-st_folium(m)
+st_folium(m, width='100%')
+
 # folium_static(m)
